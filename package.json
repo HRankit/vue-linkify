@@ -4,7 +4,7 @@
   "description": "A simple Vue directive to turn URL's and emails into clickable links",
   "main": "dist/vue-linkify.min.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "test": "npm build && node_modules/karma/bin/karma start test/karma.conf.js",
     "lint": "./node_modules/.bin/eslint index.js",
     "build": "./node_modules/.bin/eslint index.js && BABEL_ENV=production && babel index.js -o ./dist/vue-linkify-hashtags-mentions.min.js"
   },
@@ -29,24 +29,24 @@
     "vue": "^2.1.6"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.2.9",
-    "babel-preset-babili": "^0.0.9",
-    "babel-preset-es2015": "^6.18.0",
-    "chai": "^3.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
     "eslint": "^3.12.1",
     "eslint-config-vue": "^2.0.1",
     "eslint-plugin-vue": "^1.0.0",
-    "karma": "^1.3.0",
-    "karma-mocha": "^1.3.0",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "karma-sinon-chai": "^1.2.4",
-    "karma-webpack": "^1.8.0",
-    "mocha": "^3.2.0",
-    "phantomjs-prebuilt": "^2.1.14",
-    "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0",
-    "webpack": "^1.14.0"
+    "jasmine-core": "^2.8.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-mocha": "^2.0.1",
+    "karma-webpack": "^2.0.9",
+    "mocha": "^7.1.2",
+    "webpack": "^3.10.0"
   }
 }
